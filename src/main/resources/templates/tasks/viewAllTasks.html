@@ -1,0 +1,48 @@
+<!--страница со списком задач-->
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задачи</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h1>Список задач</h1>
+    <a
+            th:href="'tasks/add'"
+            class="btn btn-secondary"
+            role="button"
+            style="float: right"
+            aria-disabled="true">Добавить задачу</a>
+    <div>
+
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Задача</th>
+            <th scope="col">Срочность</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--        Перебор книг-->
+        <tr th:each="task: ${tasks}">
+            <td th:text="${task.title}"></td>
+            <td th:text="${task.urgency.getUrgencyName()}"></td>
+            <td>
+                <a th:href="'/api/tasks/delete/' + ${task.id}"
+                   class="btn btn-primary"
+                   role="button"
+                   onclick="return confirm('Вы действительно хотите удалить задание?');"
+                   aria-disabled="true">Удалить</a>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

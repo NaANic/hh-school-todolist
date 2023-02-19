@@ -1,0 +1,34 @@
+<!--Добавление-->
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить Задачу</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <!--        Форма добавления-->
+    <!--        action="" - url на который будут отправлены данные-->
+    <!--        object="" - имя объекта в котором будут храниться данные (нужно чтобы потом в контроллере их распарсить)-->
+    <form method="POST" th:action="@{/tasks/add}" th:object="${taskForm}">
+        <div class="mb-3">
+            <label for="title" class="form-label">Задача</label>
+            <input name="title" type="text" class="form-control" id="title">
+        </div>
+        <div class="mb-3">
+            <label for="urgency" class="form-label">Срочность</label>
+            <select class="form-select" name="urgency" id="urgency" aria-label="Default select example">
+                <option selected>Определите срочность</option>
+                <option value="IMPORTANT_URGENT">Важно - Срочно</option>
+                <option value="NOT_IMPORTANT_NOT_URGENT">Неважно - Не срочно</option>
+                <option value="NOT_IMPORTANT_URGENT">Неважно - Срочно</option>
+                <option value="IMPORTANT_NOT_URGENT">Важно - Не срочно</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить задачу</button>
+    </form>
+</div>
+</body>
+</html>
