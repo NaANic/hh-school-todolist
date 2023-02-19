@@ -5,5 +5,4 @@ HeadHunter School 2022-2023
 
 HomeWork №04
 
-Проект to-do list с использованием Spring Framework
-
+Проект to-do list с использованием Spring Framework, MVC, postgres, docker, Thymeleaf с bootstrap
