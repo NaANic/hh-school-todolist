@@ -18,8 +18,6 @@ import java.time.LocalDateTime;
 @MappedSuperclass
 public abstract class GenericModel
       implements Serializable {
-    //serialver - команда встроенная в JDK
-    static final long SerialVersionUID = -4862926644813433707L;
     
     @Id
     @Column(name = "id", nullable = false)

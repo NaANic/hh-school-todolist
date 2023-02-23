@@ -7,3 +7,4 @@ HomeWork №04
 
 Проект to-do list с использованием Spring Framework
 
+Для использования: запустить docker-compose.yaml, стартовать приложение, перейти на http://localhost:9090/api/
