@@ -5,6 +5,6 @@ HeadHunter School 2022-2023
 
 HomeWork №04
 
-Проект to-do list с использованием Spring Framework
+Проект to-do list с использованием Spring Framework, MVC, postgres, docker, Thymeleaf с bootstrap
 
 Для использования: запустить docker-compose.yaml, стартовать приложение, перейти на http://localhost:9090/api/
