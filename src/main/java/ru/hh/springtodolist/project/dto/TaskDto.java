@@ -17,8 +17,6 @@ public class TaskDto {
   private Long id;
   private String title;
   private Urgency urgency;
-  private String createdBy;
-  private LocalDateTime createdWhen;
 
   public TaskDto(Long id, String title, Urgency urgency) {
     this.id = id;
