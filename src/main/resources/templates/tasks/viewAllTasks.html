@@ -28,7 +28,7 @@
         </tr>
         </thead>
         <tbody>
-        <!--        Перебор книг-->
+
         <tr th:each="task: ${tasks}">
             <td th:text="${task.title}"></td>
             <td th:text="${task.urgency.getUrgencyName()}"></td>

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ru.hh.springtodolist.project.dto.TaskDTO;
+import ru.hh.springtodolist.project.dto.TaskDto;
 import ru.hh.springtodolist.project.service.TaskService;
 
 import javax.validation.Valid;
@@ -33,7 +33,7 @@ public class MVCTaskController {
   }
 
   @PostMapping("/add")
-  public String create(@ModelAttribute("taskForm") @Valid TaskDTO taskDTO) {
+  public String create(@ModelAttribute("taskForm") @Valid TaskDto taskDTO) {
     taskService.createFromDTO(taskDTO);
     return "redirect:/tasks";
   }
