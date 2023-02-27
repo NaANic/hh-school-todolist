@@ -24,7 +24,5 @@ public class TaskDto {
     this.id = id;
     this.title = title;
     this.urgency = urgency;
-    this.createdBy = "ADMIN";
-    this.createdWhen = LocalDateTime.now();
   }
 }
